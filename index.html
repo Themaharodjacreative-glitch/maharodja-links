@@ -32,16 +32,18 @@
 
     <!-- Header Banner -->
     <div class="relative w-full h-48 overflow-hidden bg-slate-800">
-      <!-- Image Banner dari Dashboard Lynk.id -->
+      <!-- Menggunakan file gambar banner maharodja.png -->
       <img src="banner maharodja.png" alt="The Maharodja Creative Studio Banner" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
     </div>
 
     <!-- Profil Header -->
-    <div class="relative px-6 -mt-16 text-center flex flex-col items-center">
+    <div class="relative px-6 -mt-14 text-center flex flex-col items-center">
       <!-- Avatar Kodo -->
       <div class="relative">
-        <img src="https://picsum.photos/seed/kodo-avatar/200/200" alt="Avatar Kodo" class="w-24 h-24 rounded-full border-4 border-slate-900 object-cover shadow-lg">
+        <div class="w-24 h-24 rounded-full border-4 border-slate-900 bg-slate-800 overflow-hidden shadow-xl flex items-center justify-center">
+          <i data-lucide="user" class="w-12 h-12 text-slate-400"></i>
+        </div>
         <span class="absolute bottom-1 right-1 bg-lime-500 text-slate-950 p-1 rounded-full text-xs font-bold" title="Verified Creator">
           <i data-lucide="check-circle-2" class="w-4 h-4"></i>
         </span>
@@ -86,7 +88,7 @@
       <button onclick="filterCategory('affiliate')" class="px-3 py-1.5 bg-slate-800 text-slate-300 hover:bg-slate-700 rounded-lg whitespace-nowrap">🛒 Link Affiliate</button>
     </div>
 
-    <!-- Lista Link Kategori -->
+    <!-- Daftar Link Kategori -->
     <div id="linkContainer" class="px-6 mt-6 flex flex-col gap-3">
 
       <!-- Section: Cerpen & E-Book -->
@@ -196,7 +198,7 @@
     <!-- Footer -->
     <footer class="mt-12 text-center text-xs text-slate-500 border-t border-slate-800/80 pt-6 px-6">
       <p>© 2026 The Maharodja Creative Studio.</p>
-      <p class="mt-1 text-[11px]">Powered by Lynk.id Ecosystem</p>
+      <p class="mt-1 text-[11px]">Powered by GitHub Pages & Lynk.id Ecosystem</p>
     </footer>
 
   </main>
