@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Maharodja Creative Studio | Official Link</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              green: '#10b981',
+              dark: '#0f172a',
+              card: '#1e293b',
+              accent: '#84cc16'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col items-center pb-12 font-sans">
+
+  <!-- Container Utama Mobile First -->
+  <main class="w-full max-w-md bg-slate-900 min-h-screen shadow-2xl relative border-x border-slate-800 pb-10">
+
+    <!-- Header Banner -->
+    <div class="relative w-full h-48 overflow-hidden bg-slate-800">
+      <!-- Image Banner dari Dashboard Lynk.id -->
+      <img src="https://picsum.photos/seed/maharodja-banner/800/400" alt="The Maharodja Creative Studio Banner" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent"></div>
+    </div>
+
+    <!-- Profil Header -->
+    <div class="relative px-6 -mt-16 text-center flex flex-col items-center">
+      <!-- Avatar Kodo -->
+      <div class="relative">
+        <img src="https://picsum.photos/seed/kodo-avatar/200/200" alt="Avatar Kodo" class="w-24 h-24 rounded-full border-4 border-slate-900 object-cover shadow-lg">
+        <span class="absolute bottom-1 right-1 bg-lime-500 text-slate-950 p-1 rounded-full text-xs font-bold" title="Verified Creator">
+          <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+        </span>
+      </div>
+
+      <h1 class="text-xl font-bold mt-3 text-white flex items-center gap-1.5">
+        themaharodjacreative
+      </h1>
+      
+      <p class="text-lime-400 font-medium text-xs mt-1">
+        "Merajut Perjalanan Karya, Berproses Tanpa Batas"
+      </p>
+
+      <p class="text-slate-300 text-xs mt-2 px-2 leading-relaxed">
+        Gaya Sultan, Hati Karikatur. Tempatnya karya kumpulan cerpen, desain merchandise vintage, koleksi sticker, kaos streetwear & rekomendasi peralatan studio.
+      </p>
+
+      <!-- Media Sosial Links -->
+      <div class="flex items-center gap-4 mt-4 text-slate-400">
+        <a href="#" class="hover:text-lime-400 transition"><i data-lucide="globe" class="w-5 h-5"></i></a>
+        <a href="#" class="hover:text-lime-400 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+        <a href="#" class="hover:text-lime-400 transition"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+        <a href="#" class="hover:text-lime-400 transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+        <a href="#" class="hover:text-lime-400 transition"><i data-lucide="shopping-bag" class="w-5 h-5"></i></a>
+      </div>
+    </div>
+
+    <!-- Filter & Search Bar -->
+    <div class="px-6 mt-6">
+      <div class="relative">
+        <input type="text" id="searchInput" placeholder="Cari cerpen, kaos, sticker, atau affiliate..." 
+               class="w-full bg-slate-800 text-slate-200 text-xs px-4 py-2.5 pl-9 rounded-xl border border-slate-700 focus:outline-none focus:border-lime-500 transition">
+        <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-2.5"></i>
+      </div>
+    </div>
+
+    <!-- Kategori Quick Filter Tab -->
+    <div class="flex gap-2 px-6 mt-4 overflow-x-auto no-scrollbar pb-1 text-xs">
+      <button onclick="filterCategory('all')" class="px-3 py-1.5 bg-lime-500 text-slate-950 font-bold rounded-lg whitespace-nowrap">Semua</button>
+      <button onclick="filterCategory('cerpen')" class="px-3 py-1.5 bg-slate-800 text-slate-300 hover:bg-slate-700 rounded-lg whitespace-nowrap">📚 Cerpen & E-Book</button>
+      <button onclick="filterCategory('merch')" class="px-3 py-1.5 bg-slate-800 text-slate-300 hover:bg-slate-700 rounded-lg whitespace-nowrap">👕 Kaos & Sticker</button>
+      <button onclick="filterCategory('affiliate')" class="px-3 py-1.5 bg-slate-800 text-slate-300 hover:bg-slate-700 rounded-lg whitespace-nowrap">🛒 Link Affiliate</button>
+    </div>
+
+    <!-- Lista Link Kategori -->
+    <div id="linkContainer" class="px-6 mt-6 flex flex-col gap-3">
+
+      <!-- Section: Cerpen & E-Book -->
+      <div class="link-item" data-cat="cerpen">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-1">
+          <i data-lucide="book-open" class="w-3.5 h-3.5 text-lime-400"></i> Kumpulan Cerpen & E-Book Digital
+        </div>
+        <a href="#" class="block bg-slate-800/80 border border-slate-700/60 hover:border-lime-500 p-3.5 rounded-2xl transition hover:-translate-y-0.5">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 bg-lime-500/10 text-lime-400 rounded-xl">
+              <i data-lucide="file-text" class="w-5 h-5"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-sm font-semibold text-white">Kemeja Putih, Tinta Hitam</h3>
+              <p class="text-[11px] text-slate-400">Cerpen dinamika percetakan & kehidupan kantor</p>
+            </div>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+          </div>
+        </a>
+      </div>
+
+      <div class="link-item" data-cat="cerpen">
+        <a href="#" class="block bg-slate-800/80 border border-slate-700/60 hover:border-lime-500 p-3.5 rounded-2xl transition hover:-translate-y-0.5">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 bg-lime-500/10 text-lime-400 rounded-xl">
+              <i data-lucide="book" class="w-5 h-5"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-sm font-semibold text-white">Buku Putih yang Kotor & Topeng Kemeja Putih</h3>
+              <p class="text-[11px] text-slate-400">Kumpulan serial drama fiksi di WordPress/QuarterFull</p>
+            </div>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+          </div>
+        </a>
+      </div>
+
+      <!-- Section: Merchandise & Streetwear -->
+      <div class="link-item mt-2" data-cat="merch">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-1">
+          <i data-lucide="shirt" class="w-3.5 h-3.5 text-lime-400"></i> Kaos Streetwear & Sticker Kodo
+        </div>
+        <a href="#" class="block bg-slate-800/80 border border-slate-700/60 hover:border-lime-500 p-3.5 rounded-2xl transition hover:-translate-y-0.5">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 bg-amber-500/10 text-amber-400 rounded-xl">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-sm font-semibold text-white">Kaos DTF "Napas Dulu, Semua Gak Harus Beres Hari Ini"</h3>
+              <p class="text-[11px] text-slate-400">Koleksi apparel streetwear line art khas studio</p>
+            </div>
+            <i data-lucide="shopping-bag" class="w-4 h-4 text-slate-500"></i>
+          </div>
+        </a>
+      </div>
+
+      <div class="link-item" data-cat="merch">
+        <a href="#" class="block bg-slate-800/80 border border-slate-700/60 hover:border-lime-500 p-3.5 rounded-2xl transition hover:-translate-y-0.5">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 bg-amber-500/10 text-amber-400 rounded-xl">
+              <i data-lucide="smile" class="w-5 h-5"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-sm font-semibold text-white">Sticker Pack Maskot Kodo</h3>
+              <p class="text-[11px] text-slate-400">Sticker vinyl komodo kemeja putih & kacamata</p>
+            </div>
+            <i data-lucide="shopping-bag" class="w-4 h-4 text-slate-500"></i>
+          </div>
+        </a>
+      </div>
+
+      <!-- Section: Affiliate -->
+      <div class="link-item mt-2" data-cat="affiliate">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-1">
+          <i data-lucide="external-link" class="w-3.5 h-3.5 text-lime-400"></i> Rekomendasi Affiliate Desk Setup & Percetakan
+        </div>
+        <a href="#" class="block bg-slate-800/80 border border-slate-700/60 hover:border-lime-500 p-3.5 rounded-2xl transition hover:-translate-y-0.5">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 bg-blue-500/10 text-blue-400 rounded-xl">
+              <i data-lucide="lamp" class="w-5 h-5"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-sm font-semibold text-white">Rekomendasi Lampu Desk Lamp Studio</h3>
+              <p class="text-[11px] text-slate-400">Lampu kerja minimalis untuk melukis & mengetik</p>
+            </div>
+            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded">Shopee</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="link-item" data-cat="affiliate">
+        <a href="#" class="block bg-slate-800/80 border border-slate-700/60 hover:border-lime-500 p-3.5 rounded-2xl transition hover:-translate-y-0.5">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 bg-blue-500/10 text-blue-400 rounded-xl">
+              <i data-lucide="printer" class="w-5 h-5"></i>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-sm font-semibold text-white">Peralatan Pre-Press & Aksesori Printer</h3>
+              <p class="text-[11px] text-slate-400">Perlengkapan percetakan rekomendasi studio</p>
+            </div>
+            <span class="text-[10px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded">TikTok Shop</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-12 text-center text-xs text-slate-500 border-t border-slate-800/80 pt-6 px-6">
+      <p>© 2026 The Maharodja Creative Studio.</p>
+      <p class="mt-1 text-[11px]">Powered by Lynk.id Ecosystem</p>
+    </footer>
+
+  </main>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Filter fungsionalitas
+    function filterCategory(category) {
+      const items = document.querySelectorAll('.link-item');
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-cat') === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Search Interaktif
+    document.getElementById('searchInput').addEventListener('input', function(e) {
+      const query = e.target.value.toLowerCase();
+      const items = document.querySelectorAll('.link-item');
+      items.forEach(item => {
+        const text = item.innerText.toLowerCase();
+        if (text.includes(query)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
