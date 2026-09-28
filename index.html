@@ -30,36 +30,17 @@
   <!-- Container Utama Mobile First -->
   <main class="w-full max-w-md bg-slate-900 min-h-screen shadow-2xl relative border-x border-slate-800 pb-10">
 
-    <!-- Header Banner Visual (Embedded Vector Artwork - Tidak Akan Pernah Broken/Hilang) -->
-    <div class="relative w-full h-52 overflow-hidden bg-slate-950 flex items-center justify-center border-b border-slate-800">
-      <!-- Embedded Visual Studio Graphic -->
-      <svg class="w-full h-full absolute inset-0 object-cover opacity-80" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="800" height="400" fill="#022c22"/>
-        <circle cx="400" cy="200" r="280" fill="#065f46" fill-opacity="0.5"/>
-        <circle cx="150" cy="100" r="180" fill="#047857" fill-opacity="0.3"/>
-        <circle cx="650" cy="300" r="220" fill="#10b981" fill-opacity="0.2"/>
-        <!-- Gunungan Outline Vector -->
-        <path d="M400 50 L480 280 L320 280 Z" stroke="#84cc16" stroke-width="3" stroke-dasharray="6 6" fill="none"/>
-        <path d="M400 80 L460 260 L340 260 Z" stroke="#10b981" stroke-width="2" fill="none"/>
-        <!-- Studio Text Accent -->
-        <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="#f8fafc" font-size="28" font-weight="900" font-family="sans-serif" letter-spacing="2">THE MAHARODJA</text>
-        <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" fill="#84cc16" font-size="16" font-weight="700" font-family="sans-serif" letter-spacing="4">CREATIVE STUDIO</text>
-        <text x="50%" y="70%" dominant-baseline="middle" text-anchor="middle" fill="#a7f3d0" font-size="11" font-style="italic" font-family="sans-serif">"Merajut Perjalanan Karya, Berproses Tanpa Batas"</text>
-      </svg>
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-black/30"></div>
+    <!-- Header Banner -->
+    <div class="relative w-full h-48 overflow-hidden bg-slate-950">
+      <img src="banner.png" alt="The Maharodja Creative Studio Banner" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-black/20"></div>
     </div>
 
     <!-- Profil Header -->
     <div class="relative px-6 -mt-12 text-center flex flex-col items-center">
-      <!-- Avatar Gunungan Wayang Studio Icon -->
+      <!-- Avatar Profile -->
       <div class="relative">
-        <div class="w-24 h-24 rounded-full border-4 border-slate-900 bg-slate-950 flex items-center justify-center shadow-2xl p-3 border-lime-500/30">
-          <svg class="w-full h-full text-lime-400" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50 10 L85 80 L15 80 Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
-            <path d="M50 25 L73 70 L27 70 Z" stroke="#10b981" stroke-width="3" stroke-linejoin="round"/>
-            <circle cx="50" cy="50" r="10" fill="currentColor"/>
-          </svg>
-        </div>
+        <img src="logo.png" alt="Logo The Maharodja Creative" class="w-24 h-24 rounded-full border-4 border-slate-900 bg-slate-950 object-cover shadow-2xl">
         <span class="absolute bottom-1 right-1 bg-lime-500 text-slate-950 p-1 rounded-full text-xs font-bold" title="Verified Creator">
           <i data-lucide="check-circle-2" class="w-4 h-4"></i>
         </span>
@@ -220,10 +201,8 @@
   </main>
 
   <script>
-    // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Filter fungsionalitas
     function filterCategory(category) {
       const items = document.querySelectorAll('.link-item');
       items.forEach(item => {
@@ -235,7 +214,6 @@
       });
     }
 
-    // Search Interaktif
     document.getElementById('searchInput').addEventListener('input', function(e) {
       const query = e.target.value.toLowerCase();
       const items = document.querySelectorAll('.link-item');
